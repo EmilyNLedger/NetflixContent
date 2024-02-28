@@ -37,6 +37,7 @@ country - (string) is the name the country that produced that movie or tv show
 return- (list) that list of all movies produced from that country
 */
 function getCountry(country){
+    var result = [];
     for(var i = 0; i < Title_Of_Content.length; i++){
         if(Countries[i].toLowerCase().includes(country.toLowerCase())){
           result.push(Title_Of_Content[i])
@@ -60,9 +61,10 @@ return - (list) returns a list of all the movies/tv shows that fall under the pa
 */
 
 
+
 /*
 Takes a rating as a paramter and returns a list of movies/tv shows that are classified under that rating
-rating - (string) is the name var result = [];
+rating - (string) is the name 
 
 
 */
