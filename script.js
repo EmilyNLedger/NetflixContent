@@ -23,3 +23,5 @@ function getColumn(url, columnNumber){
          return column;
       }
 
+var url = "https://raw.githubusercontent.com/b-mcavoy/datasets/main/Culture%20%26%20Entertainment/Netflix%20Content.csv"
+
