@@ -75,12 +75,26 @@ function getGenre(genre){
     }
 
 }
-console.log(getGenre("Horror"));
+// console.log(getGenre("Horror"));
 
 
 /*
 Takes a rating as a paramter and returns a list of movies/tv shows that are classified under that rating
 rating - (string) is the name 
-
-
 */
+
+function getRating(rating){
+  var result = [];
+    for(var i = 0; i < Title_Of_Contents.length; i++){
+      if(Ratings[i].toLowerCase().includes(rating.toLowerCase())){
+    result.push(Title_Of_Contents[i])
+      }
+    }
+    if(result.length == 0){
+      return "That Rating does not Exist"
+    } else {
+      return result;
+    }
+
+}
+console.log(getRating("PG-13"))
