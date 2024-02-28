@@ -23,6 +23,7 @@ function getColumn(url, columnNumber){
          return column;
       }
 var url = "https://raw.githubusercontent.com/b-mcavoy/datasets/main/Culture%20%26%20Entertainment/Netflix%20Content.csv";
+var Title_Of_Contents = getColumn(url, 2);
 var Countries = getColumn(url, 3);
 var Genres = getColumn(url, 7);
 var Release_Years = getColumn(url, 5);
@@ -37,10 +38,9 @@ country - (string) is the name the country that produced that movie or tv show
 return- (list) that list of all movies produced from that country
 */
 function getCountry(country){
-    var result = [];
-    for(var i = 0; i < Title_Of_Content.length; i++){
+    for(var i = 0; i < Title_Of_Contents.length; i++){
         if(Countries[i].toLowerCase().includes(country.toLowerCase())){
-          result.push(Title_Of_Content[i])
+          result.push(Title_Of_Contents[i])
         }
       }
        if(result.length == 0){
@@ -48,8 +48,8 @@ function getCountry(country){
       }
       else{
         return result;
-      }
-      }
+    }
+}
       // console.log(getCountry("Brazil"));      
 
 
@@ -60,6 +60,10 @@ genre - (string) is the name of a genre that the movie/tv show is catagorized un
 return - (list) returns a list of all the movies/tv shows that fall under the parameter
 */
 
+function getGenre(genre){
+
+
+}
 
 
 /*
