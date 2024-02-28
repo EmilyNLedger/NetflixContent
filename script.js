@@ -22,4 +22,18 @@ function getColumn(url, columnNumber){
          }
          return column;
       }
+var url = "https://raw.githubusercontent.com/b-mcavoy/datasets/main/Culture%20%26%20Entertainment/Netflix%20Content.csv";
+var Countries = getColumn(url, 3);
+// console.log(Countries);
+var Genres = getColumn(url, 7);
+// console.log(Genres);
+var Release_Year = getColumn(url, 5);
+// console.log(Release_Year);
+var Ratings = getColumn(url, 6);
+// console.log(Ratings);
+var Type = getColumn(url, 1);
+// console.log(Type);
+function getCountry(){
 
+
+}
