@@ -35,5 +35,18 @@ var Type = getColumn(url, 1);
 // console.log(Type);
 function getCountry(){
 
-  
 }
+
+/*
+Takes a country as a parameter and returns a list of movies/tv shows created in that country
+country - (string) is the name the country that produced that movie or tv show
+return- (list) that list of all movies produced from that country
+*/
+
+
+
+/*
+Takes a genre as a parameter and returns a list of movies/tv shows that are classified under that genre
+genre - (string) is the name 
+
+*/
