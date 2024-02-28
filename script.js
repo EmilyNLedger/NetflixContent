@@ -35,5 +35,5 @@ var Type = getColumn(url, 1);
 // console.log(Type);
 function getCountry(){
 
-
+  
 }
