@@ -38,6 +38,7 @@ country - (string) is the name the country that produced that movie or tv show
 return- (list) that list of all movies produced from that country
 */
 function getCountry(country){
+  var result = [];
     for(var i = 0; i < Title_Of_Contents.length; i++){
         if(Countries[i].toLowerCase().includes(country.toLowerCase())){
           result.push(Title_Of_Contents[i])
@@ -50,7 +51,7 @@ function getCountry(country){
         return result;
     }
 }
-      // console.log(getCountry("Brazil"));      
+      // console.log(getCountry("BRAZIL"));      
 
 
 
@@ -61,9 +62,20 @@ return - (list) returns a list of all the movies/tv shows that fall under the pa
 */
 
 function getGenre(genre){
-
+  var result = [];
+    for(var i = 0; i < Title_Of_Contents.length; i++){
+      if(Genres[i].toLowerCase().includes(genre.toLowerCase())){
+        result.push(Title_Of_Contents[i])
+      }
+    }
+    if(result.length == 0){
+      return "That Genre does not exist"
+    } else {
+      return result;
+    }
 
 }
+console.log(getGenre("Horror"));
 
 
 /*
