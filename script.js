@@ -75,7 +75,7 @@ function getGenre(genre){
     }
 
 }
-// console.log(getGenre("Horror"));
+console.log(getGenre("history"));
 
 
 /*
@@ -97,4 +97,4 @@ function getRating(rating){
     }
 
 }
-console.log(getRating("PG-13"))
+// console.log(getRating("PG-13"))
