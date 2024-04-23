@@ -51,14 +51,13 @@ function getCountry(country){
         return result;
     }
 }
-      // console.log(getCountry("BRAZIL"));      
-
+console.log(getCountry("Canada"));      
 
 
 /*
 Takes a genre as a parameter and returns a list of movies/tv shows that are classified under that genre
 genre - (string) is the name of a genre that the movie/tv show is catagorized under
-return - (list) returns a list of all the movies/tv shows that fall under the parameter
+return - (list) returns a list of all the movies/tv shows that fall under the parameter or That Genre does not exist
 */
 
 function getGenre(genre){
@@ -75,12 +74,12 @@ function getGenre(genre){
     }
 
 }
-console.log(getGenre("history"));
-
+// console.log(getGenre(""));
 
 /*
 Takes a rating as a paramter and returns a list of movies/tv shows that are classified under that rating
 rating - (string) is the name 
+return - (list) list of all movies/ tv shows under that rating  or That Rating does not exist
 */
 
 function getRating(rating){
@@ -91,10 +90,55 @@ function getRating(rating){
       }
     }
     if(result.length == 0){
-      return "That Rating does not Exist"
+      return "That Rating does not exist"
     } else {
       return result;
     }
 
 }
-// console.log(getRating("PG-13"))
+//  console.log(getRating("PG-13"))
+
+
+
+
+/*
+Takes a year as a parameter and returns a list of movies/tv shows created in that year
+year - (number) is the release date of the movie or tv show
+return - (list) list of all movies produced from that country
+*/
+
+function getYear(year){
+  var result = [];
+    for(var i = 0; i < Title_Of_Contents.length; i++){
+      if(Release_Years[i].toLowerCase().includes(year)){
+    result.push(Title_Of_Contents[i])
+      }
+    }
+    if(result.length == 0){
+        return ["No Titles under that year"];
+    } else {
+      return result;
+    }
+}
+// console.log(getYear(1986))
+
+/*
+Takes a title as a parameter and returns either movie or tv show 
+title - (variable) is the release date of the movie or tv show
+return - (variable) either the word list or movie to explain whether the title is a movie or a tv show
+*/
+
+function getType(title){
+    for(var i = 0; i < Title_Of_Contents.length; i++){
+      if(Title_Of_Contents[i].includes(title)){
+        return Types[i];
+      }
+    }
+   
+    return "No Titles under that name"
+  
+}
+
+// console.log(getType("The Aerial"));
+
+
