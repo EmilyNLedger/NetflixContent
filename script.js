@@ -51,7 +51,7 @@ function getCountry(country){
         return result;
     }
 }
-console.log(getCountry("Canada"));      
+// console.log(getCountry("United Statesss"));      
 
 
 /*
@@ -74,7 +74,8 @@ function getGenre(genre){
     }
 
 }
-// console.log(getGenre(""));
+
+console.log(getGenre("HorRor"));
 
 /*
 Takes a rating as a paramter and returns a list of movies/tv shows that are classified under that rating
