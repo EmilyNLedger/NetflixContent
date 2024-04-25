@@ -75,7 +75,7 @@ function getGenre(genre){
 
 }
 
-console.log(getGenre("HorRor"));
+// console.log(getGenre("HORRROR"));
 
 /*
 Takes a rating as a paramter and returns a list of movies/tv shows that are classified under that rating
@@ -91,13 +91,13 @@ function getRating(rating){
       }
     }
     if(result.length == 0){
-      return "That Rating does not exist"
+      return "That rating does not exist"
     } else {
       return result;
     }
 
 }
-//  console.log(getRating("PG-13"))
+//  console.log(getRating("tV-pG"))
 
 
 
@@ -121,7 +121,7 @@ function getYear(year){
       return result;
     }
 }
-// console.log(getYear(1986))
+console.log(getYear(1999))
 
 /*
 Takes a title as a parameter and returns either movie or tv show 
@@ -131,7 +131,7 @@ return - (variable) either the word list or movie to explain whether the title i
 
 function getType(title){
     for(var i = 0; i < Title_Of_Contents.length; i++){
-      if(Title_Of_Contents[i].includes(title)){
+      if(Title_Of_Contents[i].toLowerCase().includes(title.toLowerCase())){
         return Types[i];
       }
     }
